@@ -23,7 +23,7 @@ const useFetch =(url) =>{
         setError(error.message);
         setIsPending(false);
       })
-    },1000);
+    },500);
   } ,[url]);
 
   return(
