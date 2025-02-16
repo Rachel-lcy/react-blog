@@ -5,6 +5,7 @@ import Create from './components/Create';
 
 import './App.css'
 import BlogDetails from './components/BlogDetails';
+import NotFound from './components/NotFound';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             <Route exact path='/' element={ <Home />}></Route>
             <Route path='/create' element={ <Create />}></Route>
             <Route path='/blogs/:id' element={ <BlogDetails />}></Route>
+            <Route path='*' element={ <NotFound />}></Route>
           </Routes>
         </div>
       </div>

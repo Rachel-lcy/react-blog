@@ -24,9 +24,8 @@ export default function Create() {
     }).then(()=>{
       console.log('new blog added');
       setIsPending(false);
-      navigate('/'); 
+      navigate('/');
     })
-    
   }
 
   return (
