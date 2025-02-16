@@ -5,11 +5,17 @@ export default function Create() {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const [author, setAuthor] = useState('')
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    const blog ={title,body,author};
+    console.log(blog)
+
+  }
 
   return (
     <div className='create'>
       <h2>Add a new blog</h2>
-      <from>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="">Blog Title</label>
         <input
           type="text"
@@ -21,7 +27,7 @@ export default function Create() {
 
         />
         <label htmlFor="">Blog Body</label>
-         <textarea 
+         <textarea
           required
           value ={body}
           onChange={(e)=>{
@@ -42,7 +48,7 @@ export default function Create() {
          <p>{body}</p>
          <p>{author}</p>
 
-      </from>
+      </form>
     </div>
   )
 }
