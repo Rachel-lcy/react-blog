@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Create() {
 
@@ -6,6 +7,7 @@ export default function Create() {
   const [body, setBody] = useState('')
   const [author, setAuthor] = useState('')
   const [isPending, setIsPending] = useState(false);
+  const navigate = useNavigate();
 
 
   const handleSubmit = (e)=>{
@@ -21,8 +23,10 @@ export default function Create() {
       body:JSON.stringify(blog)
     }).then(()=>{
       console.log('new blog added');
-      setIsPending(false)
+      setIsPending(false);
+      navigate('/'); 
     })
+    
   }
 
   return (
