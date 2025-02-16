@@ -101,3 +101,11 @@
   border-radius: 8px;
   cursor: pointer;
 }
+.create button:hover {
+  background: #a40333;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
